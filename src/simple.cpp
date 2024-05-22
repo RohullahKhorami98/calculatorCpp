@@ -2,8 +2,13 @@
 #include <sstream>
 #include <vector>
 #include <string>
+#include <regex>
 using namespace std;
 
+bool isValidInput(const std::string& input) {
+    std::regex pattern("[0-9,.+-*/]+");
+    return std::regex_match(input, pattern);
+}
 
 std::string removeWhiteSpaces(const std::string& text){
     std::string temp;
