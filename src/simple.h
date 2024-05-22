@@ -2,5 +2,5 @@
 #define SIMPLE_H
 
 #include <string>
-double addition(std::string addStr);
+double allInOne(std::string addStr);
 #endif //SIMPLE_H

@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+
 std::string removeWhiteSpaces(const std::string& text){
     std::string temp;
     for(int i = 0; i<text.size(); i++){
@@ -14,18 +15,21 @@ std::string removeWhiteSpaces(const std::string& text){
     return temp;
 }
 
+vector<char>getOperators(std::string expression){
+    vector<char>operators;
+    for(char c: expression){
+        if(c == '+' || c == '-' || c == '*' || c == '/'){
+            operators.push_back(c);
+        }
+    }
+    return operators;
+}
 
-double addition(std::string addStr){
+double allInOne(std::string addStr){
     std::string cleanString = removeWhiteSpaces(addStr);
-    stringstream plusSeperated(cleanString);
-    std::string temp;
-    std::vector<double> additionArray;
-    while(std::getline(plusSeperated,temp,'+')){
-        additionArray.push_back(stod(temp));
+    vector<char> optrs = getOperators(cleanString);
+    for(char c : optrs){
+        std::cout<<c<<endl;
     }
-    double result;
-    for(double t: additionArray){
-        result+=t;
-    }
-    return result;
+    return 0;
 }
