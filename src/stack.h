@@ -10,5 +10,6 @@ public:
     char top();
     bool isEmpty();
     std::size_t size();
+    void printStack();
 };
 #endif //STACK_H

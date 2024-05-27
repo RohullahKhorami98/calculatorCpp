@@ -2,5 +2,6 @@
 #define SIMPLE_H
 
 #include <string>
-double allInOne(std::string addStr);
+#include "stack.h"
+double allInOne(std::string addStr, Stack &s);
 #endif //SIMPLE_H

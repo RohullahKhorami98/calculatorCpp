@@ -7,14 +7,14 @@
  * i Use scope resolution:: operator  to implement function for better practice
 */
 class Stack{
-private:
-    std::vector<char>charStack;
 public:
+    std::vector<char>charStack;
     void push(char c);
     void pop();
     char top();
     bool isEmpty();
     std::size_t size();
+    void printStack();
 };
 
 void Stack::push(char c){
@@ -31,4 +31,9 @@ bool Stack::isEmpty() {
 }
 std::size_t Stack::size(){
     return charStack.size();
+}
+void Stack::printStack() {
+    for (char c : charStack) {
+        std::cout << c <<std::endl;
+    }
 }

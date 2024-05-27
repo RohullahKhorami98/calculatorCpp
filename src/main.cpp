@@ -1,14 +1,14 @@
 #include <iostream>
 #include "simple.h"
+#include "stack.h"
 
 using namespace std;
 int main(){
-    /**
-     * Addition
-    */
-    std::cout<<"Enter numbers for addition"<<endl;
+    std::cout<<"Enter numbers"<<endl;
     std::string addStaff;
+    Stack s;
     std::getline(std::cin, addStaff);
-    double add = allInOne(addStaff);
-    std::cout<<add<<endl;
+    allInOne(addStaff,s);
+    s.printStack();
+    return 0;
 }
