@@ -3,5 +3,5 @@
 
 #include <string>
 #include "stack.h"
-double allInOne(std::string addStr, Stack &s);
+double allInOne(std::string addStr, char operation);
 #endif //SIMPLE_H
